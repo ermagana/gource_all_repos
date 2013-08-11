@@ -4,7 +4,7 @@
 # Original Source: https://gist.github.com/anonymous/884376
 # Example:
 # <this.sh>
-dirs=(`lsgit | sed -r 's/(\w)\s.*/\1/' | cut -c3- | sort -f`)
+dirs=(`lsgit | sed -r 's/(\w)\s.*/\1/' | cut -c3- | sort -f | grep "^[^ ]"`)
  
 i=0
 for repo in ${dirs[@]}; do
