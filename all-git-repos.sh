@@ -16,7 +16,7 @@ do
 		git clone git@bitbucket.org:${1}/$repo_name.git
 	else
 		echo "Updating repo: $repo_name"
-		git --git-dir=$repo_name/.git --work-tree=$repo_name pull --all 2>/dev/null ||
-		git --git-dir=$repo_name/.git pull --all
+		git --git-dir=$repo_name/.git --work-tree=$repo_name fetch --all 2>/dev/null ||
+		git --git-dir=$repo_name/.git fetch --all
 	fi
 done
